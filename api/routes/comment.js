@@ -18,11 +18,11 @@ router.get('/ofProduct/:productId', get__comment__of__product);
 router.get('/:commentId', get__comment);
 
 router.post('/main/comment', auth, create__main__comment);
-router.patch('/mainComment/:commentId', auth, update__main__comment);
-router.delete('/mainComment/:commentId', auth, delete__main__comment);
+router.patch('/main/comment/:commentId', auth, update__main__comment);
+router.delete('/main/comment/:commentId', auth, delete__main__comment);
 
-router.post('/subComment/:commentId', auth, create__sub__comment);
-router.patch('/subComment/:commentId', auth, comment_update_subComment);
-router.delete('/subComment/:commentId', auth, comment_delete_subComment);
+router.post('/sub/comment/:commentId', auth, create__sub__comment);
+router.patch('/sub/comment/:commentId', auth, comment_update_subComment);
+router.delete('/sub/comment/:commentId', auth, comment_delete_subComment);
 
 module.exports = router;
