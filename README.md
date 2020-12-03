@@ -1,9 +1,9 @@
-# shop-backend
+# framework/library
 
-name: shopeeholic
+  mongoose, express, firebase, 
+  
+# url
+  https://shopeeholic-backend.herokuapp.com/
 
-framework / ibrary: mongoose, express, firebase 
-
-url: https://shopeeholic-backend.herokuapp.com/
-
-this is the server for shop-frontend repo
+# note
+  this is server for repo shop-frontend
