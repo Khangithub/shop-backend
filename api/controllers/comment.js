@@ -47,7 +47,11 @@ exports.create__main__comment = (req, res, next) => {
 
 exports.get__comment__of__product = (req, res, next) => {
   const {productId} = req.params;
-  Comment.find()
+  Comment.find({
+    product: {
+      _id: productId,
+    },
+  })
     .populate({
       path: 'product',
       select: '_id name',
@@ -67,15 +71,7 @@ exports.get__comment__of__product = (req, res, next) => {
     })
     .select('-__v')
     .then((docs) => {
-      return res.status(200).json({
-        docs: docs
-          .filter((doc) => {
-            return doc.commentator !== null;
-          })
-          .filter((comment) => {
-            return productId.localeCompare(comment.product._id) === 0;
-          }),
-      });
+      return res.status(200).json({docs});
     })
     .catch((error) => console.log(error));
 };

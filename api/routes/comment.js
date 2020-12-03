@@ -14,7 +14,7 @@ const {
 const {auth} = require('../middlewares/user');
 
 router.get('/', get__all__comments);
-router.get('/ofProduct/:productId', get__comment__of__product);
+router.get('/of/product/:productId', get__comment__of__product);
 router.get('/:commentId', get__comment);
 
 router.post('/main/comment', auth, create__main__comment);
