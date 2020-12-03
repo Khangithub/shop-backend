@@ -71,7 +71,7 @@ exports.get__comment__of__product = (req, res, next) => {
     })
     .select('-__v')
     .then((docs) => {
-      return res.status(200).json({docs});
+      return res.status(200).json({docsg});
     })
     .catch((error) => console.log(error));
 };
