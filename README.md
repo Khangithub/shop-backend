@@ -1,7 +1,7 @@
 # framework/library
   `mongoose`, `express`, `firebase`
 # purpose/motivation
-  this is the server for repo `shop-frontend` \
+  this is the server for repo `shop-frontend` 
 # download
   open command prompt\
   `git clone https://github.com/Khangithub/shop-backend.git` \
